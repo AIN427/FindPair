@@ -12,6 +12,8 @@ object MusicManager {
     private const val TAG = "MusicManager"
 
     fun start(context: Context) {
+        isMusicEnabled = PreferencesHelper.isMusicEnabled(context)
+
         try {
             if (mediaPlayer == null) {
                 mediaPlayer = MediaPlayer().apply {
@@ -54,7 +56,9 @@ object MusicManager {
 
     fun resume() {
         try {
-            mediaPlayer?.start()
+            if (isMusicEnabled) {
+                mediaPlayer?.start()
+            }
         } catch (e: Exception) {
             Log.e(TAG, "Error resuming music", e)
         }
@@ -69,8 +73,9 @@ object MusicManager {
         }
     }
 
-    fun toggleMusic() {
+    fun toggleMusic(context: Context) {
         isMusicEnabled = !isMusicEnabled
+        PreferencesHelper.setMusicEnabled(context, isMusicEnabled)
         if (isMusicEnabled) {
             resume()
         } else {
