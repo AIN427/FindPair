@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">FindPairGame</string>
+
+    <!-- Main Menu Screen -->
+    <string name="menu_new_game">NEW GAME</string>
+    <string name="menu_game_history">GAME HISTORY</string>
+    <string name="menu_exit">EXIT</string>
+
+    <!-- Game Screen -->
+    <string name="game_title">Find Pair</string>
+    <string name="pairs_found">Pairs found: %d</string>
+    <string name="lives_left">Lives: %d</string>
+    <string name="game_won">Victory!</string>
+    <string name="game_lost">Game Over</string>
+    <string name="new_game">New Game</string>
+    <string name="view_history">Game History</string>
+    <string name="restart_game">RESTART GAME</string>
+
+    <!-- History Screen -->
+    <string name="history_title">Game History</string>
+    <string name="history_pairs">Pairs: %d</string>
+    <string name="history_won">Victory</string>
+    <string name="history_lost">Game Over</string>
+    <string name="history_empty">No history yet</string>
+    <string name="back_to_game">Back to Game</string>
+    <string name="exit_to_menu">EXIT</string>
+</resources>
